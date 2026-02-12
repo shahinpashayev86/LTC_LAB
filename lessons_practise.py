@@ -298,22 +298,23 @@
 #
 #     for list in telebe.values():
 #         print(f"{list} ")
+### ======================================================
 
-respomses = {
-    "u1" : {"username":"admin", "status": "success"},
-    "u2" : {"username":"admin", "status": "failed"},
-    "u3" : {"username":"admin", "status": "success"},
-    "u4" : {"username":"admin", "status": "failed"},
-}
-
-success = {}
-failed = {}
-
-for uid, info in respomses.items():
-    if info["status"] == "success":
-        success[uid] = info
-        print("elave edildi")
-    else:
-        failed[uid] = info
-        print("Kecmeyenler elave edildi")
+# respomses = {
+#     "u1" : {"username":"admin", "status": "success"},
+#     "u2" : {"username":"admin", "status": "failed"},
+#     "u3" : {"username":"admin", "status": "success"},
+#     "u4" : {"username":"admin", "status": "failed"},
+# }
+#
+# success = {}
+# failed = {}
+#
+# for uid, info in respomses.items():
+#     if info["status"] == "success":
+#         success[uid] = info
+#         print("elave edildi")
+#     else:
+#         failed[uid] = info
+#         print("Kecmeyenler elave edildi")
 
