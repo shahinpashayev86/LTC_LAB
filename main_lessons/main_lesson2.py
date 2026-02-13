@@ -1,9 +1,19 @@
-blacklist_dict = {"silah": 0.95, "qan": 0.83, "bomba": 0.75, "axmaq": 0.5  }
+blacklist_dict = {"silah": 0.9, "qan": 0.83, "bomba": 0.81, "axmaq": 0.5}
 
-user_prompt = input("sorgunuzu daxil edin: ")
+user_prompt = input("Sorğunuzu daxil edin: ").lower()
+toxicity_score = 0.5
+found = False
 
-if user_prompt in blacklist_dict:
-    print("Daxil elediyiniz soz qadağandır")
-else:
-    print("ugurlu sorğu")
+for word, score in blacklist_dict.items():
+    if word in user_prompt:
+        # Əgər toksiklik verilmiş limiti keçirsə (və ya bərabərdirsə)
+        if toxicity_score >= score:
+            print(f"KRİTİK BLOK: '{word}' sözü aşkarlandı (Limit: {score}, Sizin Skor: {toxicity_score})")
+            found = True
+            break
+
+if not found:
+    print(f"UĞURLU SORĞU: '{user_prompt}' qəbul edildi.")
+
+
 
