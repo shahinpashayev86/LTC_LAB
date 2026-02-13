@@ -263,7 +263,9 @@
 #     if l["age"] > 18:
 #         yeni_list.append(l)
 # print(yeni_list)
-
+from difflib import restore
+from encodings.punycode import adapt
+from queue import PriorityQueue
 
 # user = {"username": "admin", "password": "12345"}
 #
@@ -317,4 +319,94 @@
 #     else:
 #         failed[uid] = info
 #         print("Kecmeyenler elave edildi")
+
+############# =========== 13.02.2026 lesson4 ============############
+
+# name = input("Adinizi daxil edin: ")
+# age = input("yashinizi daxil edin: ")
+#
+# def salam_de(name):
+#     return f"Salam {name}, Yash {age}"
+#     # print("Salama", name )
+#
+# print(salam_de(name,age))
+#
+
+# reqemler = [1,2,3,4,5]
+#
+# def tapmaq (axtardigimiz_reqem):
+#     if axtardigimiz_reqem > len(reqemler):
+#         print("reqemler uzundur")
+#     else:
+#         print("reqemler kicikdir")
+#     return "siz reqemi qeyd etdiniz"
+# print(tapmaq(4))
+
+
+# mehsul = {
+#     "alma": {"qiymet": 20 , "cheki": 3.1,"stock": 17 },
+#     "armud": {"qiymet": 12, "cheki": 4.4, "stock": 11},
+#     "nar": {"qiymet": 32, "cheki": 5.5, "stock": 14},
+#     "banan": {"qiymet": 11, "cheki": 6.1,"stock": 10},
+#     "heyva": {"qiymet": 16, "cheki": 3.5,"stock": 19}
+# }
+#
+#
+#
+# stock_melumati = {}
+#
+#
+# for adlar, info in mehsul.items():
+#     if info["stock"] > 10:
+#         stock_melumati[adlar] = info["cheki"],info["qiymet"]
+#
+# print(stock_melumati)
+
+
+
+# mushteri_daxil_edecek = int(input("musher daxil edeceyi qiymet: "))
+#
+# def mehsulda_axtarish(mehsul,kenardan_gelen):
+#     stock_melumati = {}
+#     for mehsulun_adi, mehsulun_infosu in mehsul.items():
+#         if mehsulun_infosu["qiymet"] > kenardan_gelen:
+#             stokdaki_melumat[mehsulun_adi] = mehsulun_infosu
+#     if stock_melumati == {}
+#         return "Stockda mehsul yoxdur"
+#     return stokdaki_melumat
+#
+# print(mehsulda_axtarish,(mehsul,mushteri_daxil_edecek))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
