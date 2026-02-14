@@ -6,7 +6,6 @@ found = False
 
 for word, score in blacklist_dict.items():
     if word in user_prompt:
-        # Əgər toksiklik verilmiş limiti keçirsə (və ya bərabərdirsə)
         if toxicity_score >= score:
             print(f"KRİTİK BLOK: '{word}' sözü aşkarlandı (Limit: {score}, Sizin Skor: {toxicity_score})")
             found = True
