@@ -14,6 +14,7 @@
 # 4. Dövr daxilində məntiq qurun:
 #     - Əgər namizədin təcrübəsi 3 ildən çoxdursa **VƏ** "Python" bacarığı varsa, onu `qualified_candidates` siyahısına əlavə edin.
 # 5. Sonda qəbul edilən namizədlərin adlarını ekrana çap edin.
+print("\n Task1")
 
 candidates = [
     {"name": "Aysel Məmmədova", "skills": ["Python", "SQL"], "experience_years": 5},
@@ -56,15 +57,16 @@ for qc in qualified_candidates:
 #         - Balansdan 50 token çıxın (`token_balance -= cost_per_cv`).
 #         - Qalıq balansı göstərin.
 
+print("\n Task2")
 
 token_balance = 180
 cost_per_cv = 50
 
 
 candidates = ["Shahin", "Nazim", "Arzu", "Kənan"]
-
 print(f"Balans: {token_balance} token\n")
 
+print(f" Ne qeder vaxta while dowruyyede olmalidr:   {len(candidates)}")
 index = 0
 while index < len(candidates):
     candidate_name = candidates[index]
