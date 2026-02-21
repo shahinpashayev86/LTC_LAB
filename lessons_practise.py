@@ -379,15 +379,77 @@ from queue import PriorityQueue
 
 
 
+############# =========== 20.02.2026 lesson4 ============############
+
+#
+# # tupel examples
+#
+# sheher = ("Baki",)
+# lc =(1234,)
+#
+#
+# print(type(sheher))
+# print(type(lc))
+#
+#
+# umumi = ("Sheher", 1233, True, 99.99)
+# litsll = ["Sheher", 1233, True, 99.99]
+#
+# yeni_tuple = tuple(litsll)
+#
+# print(yeni_tuple)
+#
 
 
 
+# # Sadə bir AI model konfiqurasiyası
+# model_config = {
+#     "model_name": "GPT-4",
+#     "context_window": 128000,
+#     "temperature": 0.7
+# }
+#
+# # Məlumata müraciət (Index yox, Key ilə - Sürətli O(1))
+# print(model_config["model_name"])  # Nəticə: GPT-4
 
 
+# # Mətndən gələn xam sözlər (Təkrarlarla)
+# raw_tokens = ["süni", "intellekt", "süni", "öyrənmə", "süni", "süni"]
+#
+# # Set-ə çevirmə (Təkrarlar avtomatik silinir)
+# vocab = set(raw_tokens)
+# print(vocab) # {'süni', 'intellekt', 'öyrənmə'}
 
 
-
-
+# import tiktoken
+#
+#
+# def compare_languages(text_en, text_az):
+#     # GPT-4-ün istifadə etdiyi encoding sistemi: cl100k_base
+#     enc = tiktoken.get_encoding("cl100k_base")
+#
+#     # Mətni token ID-lərinə çeviririk (Encoding)
+#     tokens_en = enc.encode(text_en)
+#     tokens_az = enc.encode(text_az)
+#
+#     print("-" * 40)
+#     print(f"🇬🇧 İngilis: '{text_en}'")
+#     print(f"   Token sayı: {len(tokens_en)}")
+#     # Hər ID-nin qarşılığı olan mətn parçasını göstəririk
+#     print(f"   Tokenlər: {[enc.decode_single_token_bytes(t).decode('utf-8', errors='replace') for t in tokens_en]}")
+#
+#     print("-" * 40)
+#     print(f"🇦🇿 Azərbaycan: '{text_az}'")
+#     print(f"   Token sayı: {len(tokens_az)}")
+#     print(f"   Tokenlər: {[enc.decode_single_token_bytes(t).decode('utf-8', errors='replace') for t in tokens_az]}")
+#     print("-" * 40)
+#
+#
+# # Canlı Demo
+# compare_languages(
+#     "Hello, I am learning artificial intelligence",
+#     "Salam, Mən süni intellekt öyrənirəm"
+# )
 
 
 
